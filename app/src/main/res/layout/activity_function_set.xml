@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.tourye.wake.ui.activities.FunctionSetActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="#FFF6F6F6" />
+
+    <LinearLayout
+        android:id="@+id/ll_function_set_remind"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="提醒设置"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_16" />
+
+        <ImageView
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_15"
+            android:background="@drawable/icon_arrow_right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginLeft="@dimen/size_15"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="版本信息"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_function_set_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_15"
+            android:text="v---"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginLeft="@dimen/size_15"
+        android:background="#FFEFEFEF" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_function_set_quit"
+        android:layout_width="@dimen/size_335"
+        android:layout_height="@dimen/size_46"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_30"
+        android:background="@drawable/shape_function_set"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/color_white_font"
+        android:textSize="@dimen/sp_16" />
+
+
+</LinearLayout>

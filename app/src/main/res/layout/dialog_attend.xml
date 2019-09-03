@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/shape_dialog_back"
+    android:layout_width="@dimen/size_300"
+    android:layout_height="@dimen/size_120">
+
+    <TextView
+        android:text="是否明天开始参与结算分奖金？"
+        android:textSize="@dimen/sp_18"
+        android:gravity="center"
+        android:textColor="@color/color_common_font"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_80" />
+
+    <View
+        android:background="@color/color_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_dialog_attend_cancel"
+            android:text="否"
+            android:textColor="@color/color_common_font"
+            android:gravity="center"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="@color/color_divider"
+            android:layout_width="@dimen/size_1"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_attend_certain"
+            android:text="是"
+            android:textColor="@color/color_common_font"
+            android:gravity="center"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>

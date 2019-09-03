@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_board_ticket_privilege_back"
+    tools:context="com.tourye.wake.ui.activities.BoardTicketPrivilegeActivity">
+
+    <LinearLayout
+        android:layout_width="@dimen/size_287"
+        android:layout_height="@dimen/size_423"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@drawable/icon_board_ticket_privilege_center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_23">
+
+            <View
+                android:layout_width="@dimen/size_4"
+                android:layout_height="@dimen/size_4"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tv_ticket_privilege_title"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="@dimen/size_25"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_8"
+                android:layout_marginRight="@dimen/size_8"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_18" />
+
+            <View
+                android:layout_width="@dimen/size_4"
+                android:layout_height="@dimen/size_4"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/tv_ticket_privilege_intro"
+            android:textColor="@color/color_gray_font"
+            android:textSize="@dimen/sp_14"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20" />
+
+        <ImageView
+            android:id="@+id/img_ticket_privilege_center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_180" />
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/size_12"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_ticket_privilege_count"
+                android:layout_marginLeft="@dimen/size_15"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_67"
+                android:textColor="@color/color_gray_font"
+                android:textStyle="bold"
+                android:gravity="bottom"
+                android:text="--"
+                android:textSize="@dimen/sp_48" />
+            <TextView
+                android:text="次"
+                android:textSize="@dimen/sp_14"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/tv_ticket_privilege_exchange"
+            android:text="50局票兑换"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/color_white_font"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/selector_ticket_privilege"
+            android:layout_width="@dimen/size_195"
+            android:layout_height="@dimen/size_46" />
+
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/tv_ticket_privilege_remaining"
+        android:text="剩余局票：---"
+        android:textColor="#FFFF9A0D"
+        android:gravity="center"
+        android:textSize="@dimen/sp_18"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/size_20"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_25" />
+
+
+</RelativeLayout>

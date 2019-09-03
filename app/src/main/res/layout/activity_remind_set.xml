@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEFEFF4"
+    android:orientation="vertical"
+    tools:context="com.tourye.wake.ui.activities.RemindSetActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:background="@color/color_white_font">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_weight="1"
+            android:text="早起提醒"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_14" />
+
+        <Switch
+            android:id="@+id/switch_activity_remind_set_wake"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_22"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_15"
+            android:thumb="@drawable/selector_switch_thumb"
+            android:track="@drawable/selector_switch_track" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_remind_set"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:visibility="gone"
+        android:background="@color/color_white_font">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginLeft="@dimen/size_15"
+            android:background="#FFEFEFF4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_weight="1"
+            android:text="提醒时间"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_activity_remind_set_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_15"
+            android:text="5 ：00"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_12" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:layout_marginTop="@dimen/size_10"
+        android:background="@color/color_white_font">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_weight="1"
+            android:text="早起结算提醒"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_14" />
+
+        <Switch
+            android:id="@+id/switch_activity_remind_set_settleAccounts"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_22"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_15"
+            android:thumb="@drawable/selector_switch_thumb"
+            android:track="@drawable/selector_switch_track" />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:background="@color/color_white_font">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginLeft="@dimen/size_15"
+            android:background="#FFEFEFF4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_weight="1"
+            android:text="邀请成功提醒"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_14" />
+
+        <Switch
+            android:id="@+id/switch_activity_remind_set_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_22"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_15"
+            android:thumb="@drawable/selector_switch_thumb"
+            android:track="@drawable/selector_switch_track" />
+    </RelativeLayout>|
+
+
+</LinearLayout>

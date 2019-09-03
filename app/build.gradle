@@ -1,0 +1,206 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+/**
+ * 在项目根路径下创建一个文件key.properties
+ */
+def keystorePropertiesFile = rootProject.file('key.properties')
+//创建一个properties对象
+def keystoreProperties = new Properties()
+//加载key.properties里面的内容
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+MobSDK {
+    appKey "26f780b26a898"
+    appSecret "78e496fb6181330650d63f4ebe1b7911"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            //如果需要添加新的平台，在这里进行闭包的添加------微信、朋友圈、qq、空间需要单独进行配置
+            SinaWeibo {
+                appKey "2763075870"
+                appSecret "5a796d64e1047494d9a200b03c09c4cf"
+                bypassApproval false//很关键，不加报错
+                callbackUri "http://www.sharesdk.cn"//回调地址
+            }
+            QZone {
+                appId "1107773216"
+                appKey "mDDkmo3lyk3wKBhf"
+            }
+            WechatMoments {
+                appId "wx0efdd1059f47c593"
+                appSecret "8604d8ee8ac9cfe30408273baeecaad4"
+            }
+            Wechat {
+                appId "wx0efdd1059f47c593"
+                appSecret "8604d8ee8ac9cfe30408273baeecaad4"
+                bypassApproval false
+            }
+            QQ {
+                appId "1107773216"
+                appKey "mDDkmo3lyk3wKBhf"
+                bypassApproval false
+            }
+        }
+    }
+
+}
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.tourye.wake"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 3
+        versionName "1.0.2"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //版本名后面添加一句话，意思就是flavor dimension 它的维度就是该版本号，这样维度就是都是统一的了
+        // ---android studio 3.0之后需要
+        flavorDimensions "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile']) //签名文件
+            storePassword keystoreProperties['storePassword']  //签名文件密码
+            keyAlias keystoreProperties['keyAlias']       //签名文件别名
+            keyPassword keystoreProperties['keyPassword']     //别名密码
+        }
+
+        debug {
+            storeFile file(keystoreProperties['storeFile']) //签名文件
+            storePassword keystoreProperties['storePassword']  //签名文件密码
+            keyAlias keystoreProperties['keyAlias']       //签名文件别名
+            keyPassword keystoreProperties['keyPassword']     //别名密码
+        }
+    }
+
+    buildTypes {
+        debug {
+            //脚本构建时网址进行切换
+            buildConfigField('String', 'BASE_URL', '"http://api.wake-test.xorout.com/api/v1"')
+            buildConfigField('String', 'SHARE_URL', '"http://wake-test.xorout.com"')
+
+            zipAlignEnabled true //Zipalign优化
+            shrinkResources false // 移除无用的resource文件
+            minifyEnabled false //是否开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug//在此调用签名方法
+        }
+
+        release {
+            //脚本构建时网址进行切换
+            buildConfigField('String', 'BASE_URL', '"https://api.wake.runorout.cn/api/v1"')
+            buildConfigField('String', 'SHARE_URL', '"https://wake.runorout.cn"')
+
+            zipAlignEnabled true //Zipalign优化
+            shrinkResources false // 移除无用的resource文件
+            minifyEnabled false //是否开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release//在此调用签名方法
+        }
+
+    }
+
+    //设置包名
+    applicationVariants.all { variant ->
+        def buildType = variant.buildType.name
+        //android studio3.0之前命名
+//            variant.outputs.each { output ->
+//                def outputFile = output.outputFile
+//                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                    //应用名+版本号+渠道名+构建类型+时间戳${variant.flavorName}
+//                    def fileName = "green_v${defaultConfig.versionName}_${variant.flavorName}_${releaseTime()}_${buildType}.apk"
+//                    //APK输出到默认目录
+//                    output.outputFile = new File(outputFile.parent, fileName)
+//
+//                }
+//            }
+        //android studio3.0之后命名
+        variant.outputs.all {
+//            outputFileName = "tourye_v${defaultConfig.versionName}_${variant.flavorName}_${releaseTime()}_${buildType}.apk"
+            outputFileName = "tourye_v${defaultConfig.versionName}_${releaseTime()}_${buildType}.apk"
+        }
+    }
+
+//    productFlavors {//多渠道打包
+//        //命名规则和java一样，不能数字打头，不能纯数字
+//        zhushou360 {}
+//        xiaomi {}
+//    }
+//
+//    productFlavors.all { flavor ->
+//        //为manifest中meta-data的占位符进行赋值
+//        flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+//    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    packagingOptions {//加上这写代码
+        pickFirst 'META-INF/*'
+    }
+
+
+}
+
+//发布时间
+def releaseTime() {
+    //设置发布时间的时候不要设置小时，这样的话每个小时生成的包都不一样，在安装时studio会报找不见apk的异常
+//    return new Date().format('MMddHH', TimeZone.getTimeZone('GMT+8'))
+    return new Date().format('MMdd', TimeZone.getTimeZone('GMT+8'))
+}
+
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:design:26.1.0'
+    implementation "com.android.support:multidex:1.0.0"
+    //日志打印工具
+    implementation 'com.orhanobut:logger:2.1.1'
+    //网络请求工具
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    //网络请求拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    //json解析
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    //没有使用特殊Header，可以不加这行
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    // 腾讯移动推送--信鸽
+    implementation 'com.tencent.tac:tac-core:1.3.+'
+    implementation 'com.tencent.tac:tac-messaging:1.3.+'
+    //支付宝支付
+    implementation files('libs/alipaySdk-20180601.jar')
+    //头像选取
+    implementation('com.jph.takephoto:takephoto_library:4.0.3') {
+        exclude group: 'com.github.bumptech.glide'
+    }
+    //动态权限
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    //bugly日志上传
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+
+}
+// 腾讯移动推送--信鸽----在文件最后使用插件
+apply plugin: 'com.tencent.tac.services'

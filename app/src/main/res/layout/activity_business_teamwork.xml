@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingLeft="@dimen/size_30"
+    android:paddingRight="@dimen/size_30"
+    tools:context="com.tourye.wake.ui.activities.BusinessTeamworkActivity">
+
+    <View
+        android:background="#FFF6F6F6"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <TextView
+        android:textSize="@dimen/sp_18"
+        android:text="合作方式"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/size_35"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/size_15"
+        android:textColor="@color/color_black_font"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_25" />
+
+    <TextView
+        android:text="1、公众号免费嫁接：把不起就出局公众号链接放置在合作方的菜单按钮中。"
+        android:textColor="@color/color_black_font"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/size_15"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="2、公众号付费订制：在不起就出局公众号的基础功能上增加功能。"
+        android:textColor="@color/color_black_font"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/size_15"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="1、商城合作：在局票商城上架合作方的商品。"
+        android:textColor="@color/color_black_font"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginBottom="@dimen/size_15"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="2、其他业务：APP/公众号广告、引流、分销。"
+        android:textColor="@color/color_black_font"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginBottom="@dimen/size_30"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/color_black_font"
+        android:text="商务合作请联系工作人员"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/size_8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_20">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_black_font"
+            android:text="微信号:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_business_teamwork_wechat"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_black_font"
+            android:text="18810541362 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/tv_business_teamwork_copy"
+        android:text="一键复制"
+        android:textSize="@dimen/sp_12"
+        android:textColor="#FFFF782D"
+        android:gravity="center"
+        android:background="@drawable/shape_business_teamwork"
+        android:layout_width="@dimen/size_88"
+        android:layout_height="@dimen/size_33" />
+    
+
+
+
+</LinearLayout>

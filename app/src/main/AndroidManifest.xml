@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Android="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tourye.wake">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 获取device_id -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 信鸽推送 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 支付宝 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 本地提醒 -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <!-- bugly -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- bugly -->
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+
+        <!-- <meta-data -->
+        <!-- android:name="CHANNEL" -->
+        <!-- android:value="${CHANNEL_VALUE}" /> -->
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:theme="@style/MainTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- html打开应用 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="wake"
+                    android:scheme="tourye" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activities.LoginActivity" />
+        <activity android:name=".ui.activities.AchievementCardActivity" />
+        <activity android:name=".ui.activities.ResurrectionCardActivity" />
+        <activity android:name=".ui.activities.InviteCardActivity" />
+        <activity android:name=".ui.activities.BoardTicketActivity" />
+        <activity android:name=".ui.activities.BoardTicketPrivilegeActivity" />
+        <activity android:name=".ui.activities.BoardTicketTaskActivity" />
+        <activity android:name=".ui.activities.BoardTicketDetailActivity" />
+        <activity android:name=".ui.activities.UpdateHeadActivity" />
+
+        <!-- <provider -->
+        <!-- android:name="android.support.v4.content.FileProvider" -->
+        <!-- android:authorities="com.tourye.wake.along" -->
+        <!-- android:exported="false" -->
+        <!-- tools:replace="android:authorities" -->
+        <!-- android:grantUriPermissions="true"> -->
+
+
+        <!-- &lt;!&ndash; 提供共享路径 &ndash;&gt; -->
+        <!-- <meta-data -->
+        <!-- tools:replace="android:resource" -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/file_paths" /> -->
+
+
+        <!-- </provider> -->
+
+        <activity android:name=".ui.activities.PunchRecordActivity" />
+        <activity android:name=".ui.activities.ProblemActivity" />
+        <activity android:name=".ui.activities.WakePrizeActivity" />
+        <activity android:name=".ui.activities.AccountDetailActivity" />
+        <activity android:name=".ui.activities.InfluencePrizeActivity" />
+        <activity android:name=".ui.activities.BusinessTeamworkActivity" />
+        <activity android:name=".ui.activities.FunctionSetActivity" />
+        <activity android:name=".ui.activities.RemindSetActivity" />
+        <activity android:name=".ui.activities.PersonMessageActivity" />
+
+        <!-- 信鸽推送接收广播 -->
+        <receiver
+            android:name=".receivers.PushReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.tencent.tac.messaging.action.CALLBACK" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ui.activities.PushActivity" />
+        <!-- 信鸽推送接收广播 -->
+
+        <activity android:name=".ui.activities.MessageDetailActivity" />
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 支付宝 -->
+        <activity
+            android:name=".ui.activities.TicketShopActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activities.WakeBannerActivity"></activity>
+
+        <service
+            android:name=".serves.DownloadService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

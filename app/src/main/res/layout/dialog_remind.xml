@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/size_15"
+    android:background="#FFFFFF"
+    android:layout_height="@dimen/size_150"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_30">
+
+        <TextView
+            android:id="@+id/tv_dialog_remind_cancel"
+            android:text="取消"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_dialog_remind_certain"
+            android:text="确定"
+            android:layout_weight="1"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_90">
+        <com.tourye.wake.views.WheelView
+            android:id="@+id/wheel_dialog_remind_hour"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:itemNumber="3"
+            app:lineColor="@color/color_gray_font"
+            app:maskHeight="14dp"
+            app:noEmpty="true"
+            app:normalTextColor="#777"
+            app:normalTextSize="14sp"
+            app:selectedTextColor="#FF4A90E2"
+            app:selectedTextSize="14sp"
+            app:unitHeight="30dp" />
+        <TextView
+            android:textSize="@dimen/sp_48"
+            android:textColor="@color/color_common_font"
+            android:gravity="center"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="match_parent"/>
+
+        <com.tourye.wake.views.WheelView
+            android:id="@+id/wheel_dialog_remind_minute"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:itemNumber="3"
+            app:lineColor="@color/color_gray_font"
+            app:maskHeight="14dp"
+            app:noEmpty="true"
+            app:normalTextColor="#777"
+            app:normalTextSize="14sp"
+            app:selectedTextColor="#FF4A90E2"
+            app:selectedTextSize="14sp"
+            app:unitHeight="30dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

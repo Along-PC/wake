@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/size_84"
+        android:layout_height="@dimen/size_84">
+
+        <ImageView
+            android:id="@+id/img_item_board_ticket_privilege"
+            android:layout_width="@dimen/size_84"
+            android:layout_height="@dimen/size_84"
+            android:layout_marginBottom="@dimen/size_10" />
+
+        <TextView
+            android:id="@+id/tv_item_board_ticket_count"
+            android:text="-"
+            android:layout_marginRight="@dimen/size_15"
+            android:layout_marginTop="@dimen/size_5"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_white_font"
+            android:textSize="@dimen/sp_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_board_ticket_privilege_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_22"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/color_common_font"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_item_board_ticket_privilege_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_22"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_8"
+        android:textColor="#FFFF782D"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_item_board_ticket_privilege_exchange"
+        android:layout_width="@dimen/size_84"
+        android:layout_height="@dimen/size_28"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_board_ticket"
+        android:gravity="center"
+        android:text="立即兑换"
+        android:textColor="@color/color_white_font"
+        android:textSize="@dimen/sp_16" />
+
+
+</LinearLayout>

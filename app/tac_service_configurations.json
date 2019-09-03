@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "warning": "请不要修改这个文件中的内容",
+    "project": {
+        "projectId": 103672
+    },
+    "application": {
+        "appId": 103446,
+        "platform": "",
+        "packageId": "com.tourye.wake"
+    },
+    "services": {
+        "analytics": {
+            "appKey": "Aqcloud103446",
+            "enable": true,
+            "appId": "103446",
+            "strategy": 1,
+            "minBatchReportCount": "30",
+            "sendPeriodMillis": "3",
+            "smartReporting": false,
+            "sessionTimeoutMillis": "30",
+            "autoTrackPageEvents": true,
+            "multiProcess": true
+        },
+        "messaging": {
+            "appId": "2100306107",
+            "appKey": "A36H3UHB43AU",
+            "huaweiAppId": "",
+            "xiaomiAppId": "",
+            "xiaomiAppKey": "",
+            "meizuAppId": "",
+            "meizuAppKey": "",
+            "autoStart": true
+        },
+        "crash": {
+            "appId": "d134e6d311",
+            "enable": true,
+            "consolelogEnable": false,
+            "reportDelay": "1",
+            "nativeCrash": true,
+            "ANRCrash": true
+        },
+        "payment": {
+            "offerId": "TC103446"
+        },
+        "storage": {
+            "bucket": "tac-wake-or-out-st-1257239018",
+            "region": "ap-beijing"
+        }
+    }
+}

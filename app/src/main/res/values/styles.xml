@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    
+    <style name="HeadDialogStyle">
+        
+        <item name="android:windowEnterAnimation">@anim/head_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/head_dialog_out</item>
+
+    </style>
+
+    <style name="wakeCutoverStyle" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/next_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/last_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/last_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/next_out</item>
+    </style>
+
+    <style name="GameTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+</resources>

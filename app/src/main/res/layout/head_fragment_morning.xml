@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_fragment_morning_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_280">
+
+        <ImageView
+            android:id="@+id/img_fragment_morning_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon_morning_top_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_30"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size_20"
+            android:background="@drawable/icon_moring_ticket"
+            android:paddingLeft="@dimen/size_10">
+
+            <TextView
+                android:id="@+id/tv_fragment_morning_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="---局票"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_10"
+                android:background="@drawable/icon_arrow_right_white"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fragment_morning_pool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_80"
+            android:text="明日奖金池"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_fragment_morning_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fragment_morning_pool"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/size_8"
+            android:layout_marginTop="@dimen/size_8"
+            android:text="-- -- --"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/sp_48" />
+
+        <TextView
+            android:id="@+id/tv_fragment_morning_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fragment_morning_money"
+            android:layout_centerHorizontal="true"
+            android:text="详细规则 >"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_fragment_morning_pay"
+        android:layout_width="@dimen/size_275"
+        android:layout_height="@dimen/size_47"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_20"
+        android:layout_marginTop="@dimen/size_20"
+        android:background="@drawable/selector_fragment_bt"
+        android:gravity="center"
+        android:text="支付10元挑战金参与"
+        android:textColor="@color/color_white_font"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_fragment_morning_punch"
+        android:layout_width="@dimen/size_275"
+        android:layout_height="@dimen/size_47"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_20"
+        android:background="@drawable/selector_fragment_bt"
+        android:gravity="center"
+        android:text="打卡"
+        android:textColor="@color/color_white_font"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_fragment_wake_battle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_10"
+        android:text="今日打卡战况"
+        android:textColor="#FF101010"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:text="单人最高奖"
+            android:textColor="#FF666666"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_frag_morning_award"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginLeft="@dimen/size_2"
+            android:layout_marginRight="@dimen/size_2"
+            android:text="-"
+            android:textColor="#FFFF782D"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_23"
+            android:text="元"
+            android:textColor="#FF666666"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_frag_morning_success"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_2"
+            android:text="- - -"
+            android:textColor="#FFFF782D"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_23"
+            android:text="人成功"
+            android:textColor="#FF666666"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_frag_morning_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_2"
+            android:text="- -"
+            android:textColor="#FFFF782D"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:text="人出局"
+            android:textColor="#FF666666"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_fragment_morning_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_90"
+        android:layout_marginBottom="@dimen/size_20"
+        android:layout_marginLeft="@dimen/size_15"
+        android:layout_marginRight="@dimen/size_15" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_frag_moring_wake"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#FFFF782D"
+        app:tabMode="fixed"
+        app:tabMaxWidth="0dp"
+        android:layout_marginBottom="@dimen/size_3"
+        app:tabBackground="@android:color/transparent"
+        app:tabSelectedTextColor="#FF333333"
+        app:tabTextColor="#FF999999"
+        app:tabTextAppearance="@style/GameTextStyle">
+
+    </android.support.design.widget.TabLayout>
+
+
+
+</LinearLayout>

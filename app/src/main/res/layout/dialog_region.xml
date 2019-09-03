@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_white_font"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_150">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45">
+
+        <TextView
+            android:id="@+id/tv_dialog_region_cancel"
+            android:text="取消"
+            android:layout_marginTop="@dimen/size_15"
+            android:layout_marginLeft="@dimen/size_15"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_dialog_region_certain"
+            android:text="确定"
+            android:layout_marginTop="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_15"
+            android:layout_weight="1"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.tourye.wake.views.WheelView
+        android:id="@+id/wheel_dialog_region"
+        android:layout_width="@dimen/size_150"
+        android:layout_height="wrap_content"
+        app:itemNumber="3"
+        android:layout_gravity="center_horizontal"
+        app:lineColor="@color/color_gray_font"
+        app:maskHeight="14dp"
+        app:noEmpty="true"
+        app:normalTextColor="#777"
+        app:normalTextSize="14sp"
+        app:selectedTextColor="#FF4A90E2"
+        app:selectedTextSize="14sp"
+        app:unitHeight="30dp" />
+
+</LinearLayout>

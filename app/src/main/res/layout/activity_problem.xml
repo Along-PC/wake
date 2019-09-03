@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/size_15"
+    tools:context="com.tourye.wake.ui.activities.ProblemActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_activity_problem_punch"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="1.打卡"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/img_activity_problem_punch"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/selector_activity_problem" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#FFEFEFEF" />
+        <RelativeLayout
+            android:id="@+id/rl_activity_problem_punch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_activity_problem_punch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/size_30"
+                android:layout_margin="@dimen/size_10"
+                android:text="每日打卡时间为05:00～08:00，打卡成功则每日可获得奖金。如果打卡中断，您的挑战金将被当天早起挑战成功的人瓜分。今天报名，明天开始打卡。"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:layout_alignParentBottom="true"
+                android:background="#FFEFEFEF" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_activity_problem_challenge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="2.挑战金"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/img_activity_problem_challenge"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/selector_activity_problem" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#FFEFEFEF" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_activity_problem_challenge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_activity_problem_challenge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/size_30"
+                android:layout_margin="@dimen/size_10"
+                android:text="报名参与早起挑战需支付10元挑战金，挑战金不退还。如打卡中断则挑战结束，想要再次加入挑战则需重新报名支付挑战金。"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#FFEFEFEF" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_activity_problem_prize"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="3.奖金"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/img_activity_problem_prize"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/selector_activity_problem" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#FFEFEFEF" />
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_activity_problem_prize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_activity_problem_prize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/size_30"
+                android:layout_margin="@dimen/size_10"
+                android:text="每天08:10发放奖金，金额随机。"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#FFEFEFEF" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_activity_problem_reflect"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="4.提现"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/img_activity_problem_reflect"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/selector_activity_problem" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#FFEFEFEF" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_activity_problem_reflect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_activity_problem_reflect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10"
+                android:paddingRight="@dimen/size_30"
+                android:text="提现早起奖金或影响奖励，可以通过【我的】页面进入，点击提现。早起奖金提现金额最少1元，平台补助的影响奖励第一次提现金额最少10元。提现后平台打款到支付宝账号。"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#FFEFEFEF" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_activity_problem_influence"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="5.影响"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/img_activity_problem_influence"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/selector_activity_problem" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#FFEFEFEF" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_activity_problem_influence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_activity_problem_influence"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size_10"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/size_30"
+                android:text="分享邀请卡或每日成就卡，影响好友报名可得平台补助的现金奖励，金额无上限。影响机制：影响好友a成功报名，平台补助奖励你3元（无上限）。"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#FFEFEFEF" />
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_activity_problem_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="6.局票"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/img_activity_problem_ticket"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/selector_activity_problem" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#FFEFEFEF" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_activity_problem_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_activity_problem_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10"
+                android:paddingRight="@dimen/size_30"
+                android:text="每日打卡、获得膜拜都可以获得相应局票，局票可以兑换精美奖品。"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#FFEFEFEF" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_activity_problem_forget"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="7.避免忘记打卡"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/img_activity_problem_forget"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/selector_activity_problem" />
+
+        </LinearLayout>
+        <View
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#FFEFEFEF" />
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/size_30"
+            android:visibility="gone"
+            android:id="@+id/rl_activity_problem_forget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_activity_problem_forget"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size_10"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/size_30"
+                android:text="把公众号置顶；安卓手机可以点击公众号右上角按钮，把公众号添加到手机桌面。"
+                android:textColor="@color/color_common_font"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#FFEFEFEF" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

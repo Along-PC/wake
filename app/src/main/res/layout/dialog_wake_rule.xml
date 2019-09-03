@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_297"
+    android:background="@drawable/shape_dialog_back"
+    android:layout_height="@dimen/size_327"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="@dimen/size_30"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_25"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_30"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/size_20"
+        android:text="让早起成为雷打不动的习惯"
+        android:textColor="@color/color_common_font"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:textColor="@color/color_common_font"
+        android:textSize="@dimen/sp_14"
+        android:layout_width="@dimen/size_245"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_gravity="center_horizontal"
+        android:text="1、每天北京时间5:00~8:00打卡有效。\n2、连续打卡不出局，则每天可以获得奖金。\n3、奖金来自当天出局者，10:00发放奖金。奖金金额随机。\n4、报名需支付10元挑战金，挑战金支付后不退还。" />
+    <View
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <TextView
+        android:id="@+id/tv_dialog_wake_rule"
+        android:background="@drawable/selector_fragment_bt"
+        android:gravity="center"
+        android:textColor="@color/color_white_font"
+        android:text="支付10元挑战金参与"
+        android:layout_marginBottom="@dimen/size_30"
+        android:layout_width="@dimen/size_257"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="@dimen/size_47" />
+
+
+
+
+
+</LinearLayout>

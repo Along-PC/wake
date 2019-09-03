@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="@dimen/size_62">
+
+    <TextView
+        android:id="@+id/tv_item_account_detail_title"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginLeft="@dimen/size_15"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_22"
+        android:layout_marginBottom="@dimen/size_3"
+        android:textColor="@color/color_common_font"
+        android:textSize="@dimen/sp_16" />
+    <TextView
+        android:id="@+id/tv_item_account_detail_time"
+        android:layout_marginLeft="@dimen/size_15"
+        android:layout_below="@+id/tv_item_account_detail_title"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp_12"
+        android:textColor="#FF999999"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_17" />
+
+    <TextView
+        android:id="@+id/tv_item_account_detail_count"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/color_common_font"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

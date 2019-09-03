@@ -1,0 +1,87 @@
+package com.tourye.wake.ui.fragments;
+
+import android.os.Handler;
+import android.os.Message;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.tourye.wake.Constants;
+import com.tourye.wake.R;
+import com.tourye.wake.base.BaseApplication;
+import com.tourye.wake.base.BaseFragment;
+import com.tourye.wake.beans.InviteCardBean;
+import com.tourye.wake.net.HttpCallback;
+import com.tourye.wake.net.HttpUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Created by longlongren on 2018/8/15.
+ * <p>
+ * introduce:邀请卡持续时间页面
+ */
+
+public class InviteCardContinueFragment extends BaseInviteFragment {
+    private ImageView mImgInviteCardContinue;
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 1:
+                    initData();
+                    break;
+            }
+        }
+    };
+
+    @Override
+    public void initView(View view) {
+        mImgInviteCardContinue = (ImageView) view.findViewById(R.id.img_invite_card_continue);
+
+    }
+
+    @Override
+    public void initData() {
+        Map<String,String> map=new HashMap<>();
+        map.put("type","2");
+        HttpUtils.getInstance().get(Constants.INVITE_CARD_DATA, map, new HttpCallback<InviteCardBean>() {
+            @Override
+            public void onSuccessExecute(InviteCardBean inviteCardBean) {
+                String data = inviteCardBean.getData();
+                if (TextUtils.isEmpty(data)) {
+                    return;
+                }
+                if ("true".equals(data)) {
+                    mHandler.sendEmptyMessageDelayed(1,1000);
+                }else{
+                    mDownloadUrl=data;
+                    Glide.with(BaseApplication.mApplicationContext).load(data).placeholder(R.drawable.icon_invite_card_insist).into(mImgInviteCardContinue);
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mHandler.removeCallbacksAndMessages(null);
+    }
+
+    @Override
+    public boolean isNeedTitle() {
+        return false;
+    }
+    @Override
+    public int getRootView() {
+        return R.layout.fragment_invite_card_continue;
+    }
+
+    @Override
+    public String getImageUrl() {
+        return mDownloadUrl;
+    }
+}

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="com.tourye.wake.ui.activities.BoardTicketTaskActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_56">
+
+        <ImageView
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@drawable/icon_ticket_task_punch" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:text="每日打卡成功"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_14"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="+1局票"
+            android:textColor="#FFEE7834"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/tv_board_ticket_task_punch"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_15"
+            android:background="@drawable/shape_board_ticket_task"
+            android:gravity="center"
+            android:text="去打卡"
+            android:textColor="#FFFF782D" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_56">
+
+        <ImageView
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@drawable/icon_ticket_task_invite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:text="邀请好友为我膜拜"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_14"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="+3局票"
+            android:textColor="#FFEE7834"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/tv_board_ticket_task_invite"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_15"
+            android:background="@drawable/shape_board_ticket_task"
+            android:gravity="center"
+            android:text="去邀请"
+            android:textColor="#FFFF782D" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_56">
+
+        <ImageView
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@drawable/icon_ticket_task_attend" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:text="打卡累积3天"
+            android:textColor="@color/color_common_font"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_14"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="+3局票"
+            android:textColor="#FFEE7834"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/tv_board_ticket_task_attend"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_15"
+            android:background="@drawable/shape_board_ticket_task"
+            android:gravity="center"
+            android:text="去参加"
+            android:textColor="#FFFF782D" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="#FFEFEFEF" />
+
+</LinearLayout>

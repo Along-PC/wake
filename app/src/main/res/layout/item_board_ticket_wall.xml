@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/size_90"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="@dimen/size_156">
+        <ImageView
+            android:id="@+id/img_item_board_ticket_wall"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="@dimen/size_156" />
+        <TextView
+            android:id="@+id/tv_item_board_ticket_wall_price"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_white_font"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="#7F000000"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_24" />
+    </RelativeLayout>
+    
+    
+    <TextView
+        android:id="@+id/tv_item_board_ticket_wall"
+        android:layout_gravity="center_horizontal"
+        android:text="立即兑换"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_10"
+        android:gravity="center"
+        android:background="@drawable/shape_board_ticket"
+        android:textColor="@color/color_white_font"
+        android:textSize="@dimen/sp_14"
+        android:layout_width="@dimen/size_80"
+        android:layout_height="@dimen/size_30" />
+
+</LinearLayout>

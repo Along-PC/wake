@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/shape_dialog_back"
+    android:layout_width="@dimen/size_248"
+    android:layout_height="@dimen/size_120">
+
+    <TextView
+        android:text="确认退出当前账号的登录？"
+        android:textColor="@color/color_common_font"
+        android:textSize="@dimen/sp_14"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_above="@+id/ll_dialog_quit"
+        android:background="@color/color_common_font"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_quit"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50">
+        <TextView
+            android:id="@+id/tv_dialog_quit_cancel"
+            android:text="点错了"
+            android:textSize="@dimen/sp_12"
+            android:gravity="center"
+            android:textColor="@color/color_common_font"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:background="@color/color_common_font"
+            android:layout_width="@dimen/size_1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_dialog_quit_certain"
+            android:text="确认退出"
+            android:textSize="@dimen/sp_12"
+            android:gravity="center"
+            android:textColor="@color/color_common_font"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
